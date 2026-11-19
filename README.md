@@ -52,7 +52,6 @@ ecommerce-qa-manual-automation/
 ├── evidencias/
 │
 └── automatizacion/
-    ├── __pycache__/
     ├── conftest.py
     ├── test_login.py
     ├── test_catalogo.py
@@ -131,6 +130,56 @@ Las capturas de pantalla y evidencias de ejecución se almacenan en la carpeta `
 ## Proyectos relacionados
 
 - E-commerce QA — Validación de datos con SQL.
+
+
+## Pruebas automatizadas
+
+Se desarrollaron pruebas funcionales automatizadas
+utilizando Python, Selenium WebDriver y pytest
+sobre la aplicación Sauce Demo.
+
+### Casos implementados
+
+| ID | Caso de prueba | Resultado |
+|---|---|---|
+| AT-001 | Inicio de sesión exitoso | PASSED |
+| AT-002 | Inicio de sesión inválido | PASSED |
+| AT-003 | Visualizar catálogo | PASSED |
+| AT-004 | Agregar producto al carrito | PASSED |
+| AT-005 | Eliminar producto del carrito | PASSED |
+| AT-006 | Ordenar productos por precio ascendente | PASSED |
+| AT-007 | Ordenar productos alfabéticamente A-Z | PASSED |
+| AT-008 | Ordenar productos alfabéticamente Z-A | PASSED |
+| AT-009 | Ordenar productos por precio descendente | PASSED |
+| AT-010 | Acceder al Checkout | PASSED |
+| AT-011 | Completar datos del comprador | PASSED |
+| AT-012 | Validar resumen de compra | PASSED |
+| AT-013 | Finalizar compra | PASSED |
+| AT-014 | Verificar carrito vacío | PASSED |
+
+### Ejecución de pruebas
+
+Comando utilizado:
+
+```bash
+python -m pytest automatizacion/ -v
+```
+
+Última ejecución documentada:
+
+- Pruebas ejecutadas: 14
+- Pruebas aprobadas: 14
+- Pruebas fallidas: 0
+- Tiempo: 60.97 segundos
+
+### Tecnologías utilizadas
+
+- Python
+- Selenium WebDriver
+- pytest
+- Google Chrome
+- Visual Studio Code
+- Git y GitHub
 
 ## Autora
 
