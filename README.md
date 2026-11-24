@@ -181,6 +181,31 @@ python -m pytest automatizacion/ -v
 - Visual Studio Code
 - Git y GitHub
 
+## Automatización de pruebas — Checkout
+
+Se implementaron pruebas automatizadas para validar el proceso de compra en Sauce Demo utilizando Python, Selenium WebDriver y pytest.
+
+### Casos automatizados
+
+| Código | Caso de prueba | Resultado |
+|---|---|---|
+| AT-010 | Acceder al Checkout | PASSED |
+| AT-011 | Completar datos del comprador | PASSED |
+| AT-012 | Validar resumen de compra | PASSED |
+| AT-013 | Finalizar compra | PASSED |
+| AT-014 | Validar carrito vacío después de comprar | PASSED |
+
+### Validaciones realizadas
+
+- Acceso al formulario de Checkout.
+- Registro de datos del comprador.
+- Validación del producto seleccionado.
+- Verificación del subtotal, impuestos y total.
+- Finalización de la compra.
+- Comprobación del carrito vacío después de comprar.
+
+**Resultado:** 5 pruebas aprobadas de 5 ejecutadas.
+
 ## Autora
 
 **Deise Tarazona**

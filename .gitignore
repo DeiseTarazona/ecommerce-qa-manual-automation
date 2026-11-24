@@ -1,7 +1,27 @@
 
+
+# Archivos temporales de Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Pytest
 .pytest_cache/
+
+# Entornos virtuales
 .venv/
 venv/
+
+# Variables y archivos sensibles
 .env
+.env.*
+
+# Reportes históricos generados automáticamente
+reportes/historial/
+
+# Archivos de registro
+*.log
+
+# Reportes generados por pytest
+reports/
+reportes/

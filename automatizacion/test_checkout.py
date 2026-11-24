@@ -84,20 +84,35 @@ def completar_datos_comprador(driver):
     ).send_keys("12001")
 
 
+
+
 def continuar_al_resumen(driver):
     boton_continue = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable(
-            (By.ID, "continue")
-        )
+        EC.element_to_be_clickable((By.ID, "continue"))
     )
+
     boton_continue.click()
 
-    WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located(
-            (By.CLASS_NAME, "summary_info")
+    try:
+        WebDriverWait(driver, 10).until(
+            EC.visibility_of_element_located(
+                (By.CLASS_NAME, "summary_info")
+            )
         )
-    )
 
+    except Exception:
+        print("\n--- INFORMACION PARA DIAGNOSTICO ---")
+        print("URL actual:", driver.current_url)
+
+        errores = driver.find_elements(
+            By.CLASS_NAME, "error-message-container"
+        )
+
+        for error in errores:
+            print("Mensaje de la página:", error.text)
+
+        print("Título:", driver.title)
+        raise
 
 # ==========================================
 # AT-010: ACCEDER AL CHECKOUT
@@ -112,12 +127,12 @@ def test_acceder_checkout(driver):
 
     assert "checkout-step-one.html" in driver.current_url
 
-
 # ==========================================
 # AT-011: COMPLETAR DATOS DEL COMPRADOR
 # ==========================================
 
 def test_completar_datos_comprador(driver):
+
     iniciar_sesion(driver)
 
     agregar_mochila_y_abrir_carrito(driver)
@@ -129,8 +144,7 @@ def test_completar_datos_comprador(driver):
     continuar_al_resumen(driver)
 
     assert "checkout-step-two.html" in driver.current_url
-
-
+    
 # ==========================================
 # AT-012: VALIDAR RESUMEN DE COMPRA
 # ==========================================
