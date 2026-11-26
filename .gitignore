@@ -1,5 +1,3 @@
-
-
 # Archivos temporales de Python
 __pycache__/
 *.py[cod]
@@ -12,16 +10,19 @@ __pycache__/
 .venv/
 venv/
 
-# Variables y archivos sensibles
+# Variables sensibles
 .env
 .env.*
 
-# Reportes históricos generados automáticamente
-reportes/historial/
+# Reportes históricos
+/reportes/historial/
+
+# Ignorar reportes generados, excepto el principal
+/reportes/*
+!/reportes/reporte-qa.html
 
 # Archivos de registro
 *.log
 
-# Reportes generados por pytest
-reports/
-reportes/
+# Accesos directos de Windows
+*.lnk
