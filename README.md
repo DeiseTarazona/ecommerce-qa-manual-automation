@@ -114,3 +114,18 @@ Este proyecto forma parte de mi portafolio de aprendizaje en QA Software Testing
 ---
 
 **Repositorio:** Ecommerce QA – Manual Testing & Automation
+
+## Evidencias de ejecución
+
+Se ejecutaron 14 pruebas automatizadas utilizando
+Python, Selenium y pytest.
+
+**Resultado de ejecución:**
+- Total de pruebas: 14
+- Aprobadas: 14
+- Fallidas: 0
+- Errores: 0
+
+### Reporte de ejecución
+
+![Reporte de ejecución de pruebas](evidencias/evidencia%20reportes/reporte-ejecucion.PNG)
