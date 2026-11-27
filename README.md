@@ -129,3 +129,29 @@ Python, Selenium y pytest.
 ### Reporte de ejecución
 
 ![Reporte de ejecución de pruebas](evidencias/evidencia%20reportes/reporte-ejecucion.PNG)
+
+## Cómo ejecutar las pruebas automatizadas
+
+### Requisitos
+- Python 3 instalado.
+- Google Chrome instalado.
+
+### Instalación de dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+### Ejecutar todas las pruebas
+
+```bash
+python -m pytest automatizacion/ -v
+```
+
+### Generar reporte HTML
+
+```bash
+python -m pytest automatizacion/ -v --html=reports/reporte-qa.html --self-contained-html
+```
+
+El reporte permite visualizar los resultados de ejecución de los casos automatizados.
